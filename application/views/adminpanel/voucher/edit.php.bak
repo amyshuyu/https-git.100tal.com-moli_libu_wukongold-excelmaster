@@ -1,0 +1,145 @@
+<?php defined('BASEPATH') or exit('No direct script access allowed.'); ?>
+<form class="form-horizontal" role="form" id="validateform" name="validateform" action="<?php echo current_url()?>" >
+<div class='panel panel-default'>
+	<div class='panel-heading'>
+		<i class='icon-edit icon-large'></i>
+		<?php echo $is_edit?"修改":"新增"?>凭证科目信息
+		<div class='panel-tools'>
+
+			<div class='btn-group'>
+				<?php aci_ui_a($folder_name,'subject','index','',' class="btn  btn-sm "','<span class="glyphicon glyphicon-arrow-left"></span> 返回')?>
+			</div>
+		</div>
+	</div>
+	<div class='panel-body'>
+		<fieldset>
+				<legend>科目信息</legend>
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label">字段</label>
+						<div class="col-sm-4">
+							<input type="text" name="ziduan"  id="ziduan"  class="form-control validate[required]"  placeholder="保留为空，信息不修改" size="45" value="<?php echo $data_info['字段']?>">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">科目</label>
+						<div class="col-sm-4">
+						  <input name="kemu" type="text" class="form-control validate[required]" id="kemu" placeholder="保留为空，信息不修改" value="<?php echo $data_info['科目']?>" size="45" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label  class="col-sm-2 control-label">科目代码</label>
+						<div class="col-sm-4">
+						  <input name="kemudaima" type="text" class="form-control validate[required]" id="kemudaima" placeholder="保留为空，信息不修改" value="<?php echo $data_info['科目代码']?>" size="45" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">成本中心</label>
+						<div class="col-sm-4">
+						  <input name="chengbenzhongxin" type="text" class="form-control" value="<?php echo $data_info['成本中心']?>" id="chengbenzhongxin" placeholder="保留为空，信息不修改" size="45" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">学科</label>
+						<div class="col-sm-4">
+							<input name="xueke" type="text" class="form-control" value="<?php echo $data_info['学科']?>" id="xueke" placeholder="保留为空，信息不修改" size="45" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">客户</label>
+						<div class="col-sm-4">
+							<input name="kehu" type="text" class="form-control" value="<?php echo $data_info['客户']?>" id="kehu" placeholder="保留为空，信息不修改" size="45" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">职员</label>
+						<div class="col-sm-4">
+							<input name="zhiyuan" type="text" class="form-control" value="<?php echo $data_info['职员']?>" id="zhiyuan" placeholder="保留为空，信息不修改" size="45" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">借贷方</label>
+						<div class="col-sm-4">
+							<input name="jiedaifang" type="text" class="form-control  validate[required]" value="<?php echo $data_info['借贷方']?>" id="jiedaifang" placeholder="保留为空，信息不修改" size="45" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">分录号</label>
+						<div class="col-sm-4">
+							<input name="fenluhao" type="text" class="form-control  validate[required]" value="<?php echo $data_info['分录号']?>" id="fenluhao" placeholder="保留为空，信息不修改" size="45" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">核算项目1</label>
+						<div class="col-sm-4">
+							<input name="hesuanxiangmmu1" type="text" class="form-control" value="<?php echo $data_info['核算项目1']?>" id="hesuanxiangmmu1" placeholder="保留为空，信息不修改" size="45" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">编码1</label>
+						<div class="col-sm-4">
+							<input name="bianma1" type="text" class="form-control" value="<?php echo $data_info['编码1']?>" id="bianma1" placeholder="保留为空，信息不修改" size="45" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">名称1</label>
+						<div class="col-sm-4">
+							<input name="mingcheng1" type="text" class="form-control" value="<?php echo $data_info['名称1']?>" id="mingcheng1" placeholder="保留为空，信息不修改" size="45" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">核算项目2</label>
+						<div class="col-sm-4">
+							<input name="hesuanxiangmu2" type="text" class="form-control" value="<?php echo $data_info['核算项目2']?>" id="hesuanxiangmu2" placeholder="保留为空，信息不修改" size="45" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">编码2</label>
+						<div class="col-sm-4">
+							<input name="bianma2" type="text" class="form-control" value="<?php echo $data_info['编码2']?>" id="bianma2" placeholder="保留为空，信息不修改" size="45" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">名称2</label>
+						<div class="col-sm-4">
+							<input name="mingcheng2" type="text" class="form-control" value="<?php echo $data_info['名称2']?>" id="mingcheng2" placeholder="保留为空，信息不修改" size="45" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">学科编码</label>
+						<div class="col-sm-4">
+							<input name="xuekebianma" type="text" class="form-control" value="<?php echo $data_info['学科编码']?>" id="xuekebianma" placeholder="保留为空，信息不修改" size="45" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">学科名称</label>
+						<div class="col-sm-4">
+							<input name="xuekemingcheng" type="text" class="form-control" value="<?php echo $data_info['学科名称']?>" id="xuekemingcheng" placeholder="保留为空，信息不修改" size="45" />
+						</div>
+					</div>
+					
+			</fieldset>
+
+
+
+		<div class='form-actions'>
+			<?php aci_ui_button($folder_name,'subject','edit',' type="submit" id="dosubmit" class="btn btn-primary " ','保存')?>
+		</div>
+     </div>
+
+</form>
+<script language="javascript" type="text/javascript">
+
+	var id = <?php echo $data_info['id']?>;
+	var edit= <?php echo $is_edit?"true":"false"?>;
+	var folder_name = "<?php echo $folder_name?>";
+	function getThumb(v,s,w,h){
+		$("#thumb").val(v);
+		$("#thumb_SRC").attr("src","<?php echo $this->method_config['upload']['thumb']['upload_url']?>"+v);
+		$("#dialog" ).dialog("close");
+	}
+
+	require(['<?php echo SITE_URL?>scripts/common.js'], function (common) {
+		require(['<?php echo SITE_URL?>scripts/<?php echo $folder_name?>/<?php echo $controller_name?>/edit.js']);
+	});
+</script>

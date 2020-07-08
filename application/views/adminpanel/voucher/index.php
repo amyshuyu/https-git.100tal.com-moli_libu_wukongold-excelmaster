@@ -1,0 +1,40 @@
+<?php defined('BASEPATH') or exit('No direct script access allowed.'); ?>
+<div class='panel panel-default grid'>
+    <div class='panel-heading'>
+        <i class='glyphicon glyphicon-th-list'></i> 凭证科目信息
+    </div>
+
+
+	<form enctype="multipart/form-data" class="form-horizontal" method="post" id="myform" action="<?PHP echo site_url().'adminpanel/voucher/upload_file'; ?>" >
+      <div class="form-group">
+        <label class="col-sm-2 control-label">导入Excel表</label>
+        <div class="col-sm-10">
+          <input name="file_stu" type="file">
+            <p class="help-block">只能导入.xls或.xlsx格式的文件</p>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="button" value="upload" class="btn btn-primary btn-lg" onclick="tijiao()">导入</button>        </div>
+      </div>
+    </form>
+
+
+
+
+</div>
+</div>
+<script language="javascript" type="text/javascript">
+function submit(callback){
+    document.getElementById("myform").submit();
+    callback();
+}
+function reset(){
+     document.getElementById("myform").reset();
+}
+function tijiao(){
+    submit(reset);
+
+}
+</script>
+
